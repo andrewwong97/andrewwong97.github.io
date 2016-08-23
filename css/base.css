@@ -22,8 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation Menu */
 
 #menu {
-	float: right;
-	position: fixed;
+	position: absolute;
 	padding: .3em;
 	margin-left: .45em;
 	top: .2em;
