@@ -1,0 +1,130 @@
+<style>
+
+.partners-section {
+	background: #fff;
+	width: 100%;
+	position: relative;
+	text-align: center !important;
+}
+
+#partners-container {
+	width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.partner img {
+	text-align: center;
+	max-height: 100px;
+	max-width: 270px;
+	opacity: .5;
+	transition: opacity .3s ease-in;
+	padding: 1em;
+	margin: 1em;
+	/*vertical-align: middle;*/
+}
+
+.partner img:hover {
+	opacity: .9;
+}
+
+@media (max-width: 1192px) {	
+	.partner {
+		max-width: 55%;
+		height: auto;
+		max-height: 55px;
+		margin: 2%;
+
+	}
+}
+
+@media (max-width: 1120px) {	
+	.partner {
+		max-width: 45%;
+		height: auto;
+		max-height: 55px;
+		margin: 2%;
+	}
+}
+
+@media (max-width: 938px) {	
+	.partner {
+		max-width: 35%;
+		height: auto;
+		max-height: 55px;
+		margin: 2%;
+	}
+	#partners-container {
+		width: 100%;
+	    margin: 0 auto;
+	    left: 0;
+	    right: 0;
+	}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+	.partner {
+		max-width: 25%;
+		height: auto;
+		max-height: 55px;
+		margin: 2%;		
+	}
+	#partners-container {
+		width: 100%;
+	    margin: 0 auto;
+	    left: 0;
+	    right: 0;
+	}
+}
+
+@media handheld, screen and (min-width: 0px) and (max-width: 479px) {	
+	.partner {
+		max-width: 25%;
+		height: auto;
+		max-height: 55px;
+		margin: 2%;
+	}
+	#partners-container {
+		width: 100%;
+	    margin: 0 auto;
+	    left: 0;
+	    right: 0;
+	}
+}
+</style>
+
+<section class="partners-section">
+	<div id="partners-container">
+		<h1>Our Partners</h1>
+		<a href="http://commerce.maryland.gov/" class="partner" alt="maryland-department-of-commerce">
+			<img src="http://commerce.maryland.gov/commerce/PublishingImages/maryland-department-of-commerce-logo-rgb.jpg" />
+		</a>
+		<a href="http://medhacks.org/" class="partner" alt="medhacks">
+			<img src="http://medhacks.org/assets/img/logo_dark.png" />
+		</a>
+		<a href="https://www.facebook.com/tedxjhu/" class="partner" alt="tedxjhu">
+			<img src="http://static1.squarespace.com/static/55b8ff77e4b001c5efc22383/t/56d7ddd386db43c1b342e8a3/1475523076598/?format=1500w" />
+		</a>
+		<a href="http://www.alevelcapital.com/" class="partner" alt="a-level-capital">
+			<img src="https://tcolabs.io/wp-content/uploads/2016/09/alevel.png" />
+		</a>
+		<a href="http://lightcity.org/" class="partner" alt="lightcity">
+			<img src="https://tcolabs.io/wp-content/uploads/2016/09/lightcity.png" />
+		</a>
+		<a href="http://whatworksstudio.com/" class="partner" alt="whatworksstudio">
+			<img src="https://tcolabs.io/wp-content/uploads/2016/09/whatworks.png" />
+		</a>
+		<a href="http://uncubed.com" class="partner" alt="uncubed">
+			<img src="https://tcolabs.io/wp-content/uploads/2016/09/uncubed.png" />
+		</a>
+		<a href="http://www.compasscyber.com/" class="partner" alt="compass">
+			<img src="https://tcolabs.io/wp-content/uploads/2016/09/compass.png" />
+		</a>
+	</div>
+</section>
