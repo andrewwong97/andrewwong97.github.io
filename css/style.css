@@ -29,7 +29,7 @@ a {
     position: relative;
 }
 
-.sliding-middle-out:after {
+.sliding-middle-out:after, .sliding-middle-out:visited {
     content: '';
     display: block;
     margin: auto;
@@ -43,7 +43,6 @@ a {
     width: 100%;
     background: #2575bb;
 }
-
 
 /* Navigation Menu */
 
@@ -61,33 +60,16 @@ a {
     text-align: center;
 }
 
-#menu {
-	position: absolute;
-	padding: .3em;
-	margin-left: .45em;
-	top: .2em;
-	width: 100%;
-}
-
 #menu li {
 	display: inline-block;
 	font-size: .9em;
-	font-weight: 300;
 	padding: .1em;
 }
 
 #menu a {
 	padding: .3em;
-	text-decoration: none;
-	border-radius: .2em;
 	margin: .1em;
-	transition: color 150ms ease, 
-		 background 150ms ease;
 	font-weight: 400;
-}
-
-#menu a:hover{
-	color:#f1c40f;
 }
 
 /* About Section */
