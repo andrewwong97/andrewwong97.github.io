@@ -1,7 +1,7 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,400,600,300italic,600italic");
 
-/* Base stuff */
+/* General */
 
 body {
 	background-color: rgb(246,246,246);
@@ -19,7 +19,47 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: .1px;
 }
 
+a {
+	text-decoration: none;
+}
+
+
+.sliding-middle-out {
+    display: inline-block;
+    position: relative;
+}
+
+.sliding-middle-out:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.sliding-middle-out:hover:after {
+    width: 100%;
+    background: #2575bb;
+}
+
+
 /* Navigation Menu */
+
+#nav {
+	background: #fff;
+    border-bottom: 1px solid #f2f2f2;
+    height: 4rem;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding-bottom: 2.5em;
+    text-align: center;
+}
 
 #menu {
 	position: absolute;
@@ -41,8 +81,9 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 	border-radius: .2em;
 	margin: .1em;
-	transition: color .2s ease-in, 
-		/* background .2s ease-in*/;
+	transition: color 150ms ease, 
+		 background 150ms ease;
+	font-weight: 400;
 }
 
 #menu a:hover{
@@ -60,12 +101,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .circle {
-	height: 200px;
-	width: 200px;
+	height: 12em;
+	width: 12em;
 	border-radius: 20em;
 	background-color: #3498db;
 	float: right;
 	overflow: hidden;
+	position: relative;
+	top: 20px;
 }
 
 .circle img {
@@ -77,13 +120,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Social */
 
 .social {
-	display: inline-block;
+	position: relative;
+	right: 2em;
 	float: left;
 }
 
 .icon {
 	color: rgb(26,26,26);
-	transition: color .25s ease-in;
+	transition: color 150ms ease-in;
 	padding: .2em;
 }
 
