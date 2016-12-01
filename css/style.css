@@ -78,6 +78,11 @@ a {
 
 #about h1 {
 	font-size: 1.5em;
+	padding-left: .1em;
+}
+
+#about p {
+	padding-left: .1em;
 }
 
 #about h2 {
