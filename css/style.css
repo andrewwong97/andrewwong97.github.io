@@ -4,18 +4,15 @@
 /* General */
 
 body {
-	background-color: rgb(246,246,246);
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-size: 16pt;
 	font-weight: 300;
 	line-height: 1.65;
-	padding: 10pt;
-	padding-top: 85px;
+	margin-top: 2.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	color: #2c3e50;
-	font-size: 1.5em;
 	letter-spacing: .1px;
 }
 
@@ -74,6 +71,11 @@ a {
 
 /* About Section */
 
+#about {
+	border-bottom: 1px solid #f2f2f2;
+	background-color: rgb(246,246,246)
+}
+
 #about h1 {
 	font-size: 1.5em;
 }
@@ -91,19 +93,20 @@ a {
 	overflow: hidden;
 	position: relative;
 	top: 20px;
+	box-shadow: 0px 1px 5px #888888;
 }
 
-.circle img {
+.circle > img {
 	height: 100%;
 	width: 100%;
-	display: block;
+	display: inline-block;
 }
 
 /* Social */
 
 .social {
 	position: relative;
-	right: 2em;
+	right: 2.75em;
 	float: left;
 }
 
@@ -119,24 +122,52 @@ a {
 
 /* Portfolio */
 
-/*#work {
-	margin-top: 60px;
+#portfolio {
+	background-color: #cce6ff;
 }
 
-#portfolio-item {
-	display: inline-block;
-	height: 350px;
-	width: 300px;
-	border-radius: 1em;
-	background-color: pink;
-	margin: 3em;
-	position: relative;
+/* Card */
+
+.card-container {
+	margin: 1em 2em 1em 2em;
 	text-align: center;
-	margin: 0 auto;
-
 }
 
-#title {
-	margin-top: .5em;
-}*/
+.card {
+	display: inline-block;
+	position: relative;
+	height: 300px;
+	width: 500px;
+	background-color: #fff;
+	border-radius: 1em;
+	box-shadow: 0px 2px 3px #cccccc;
+	text-align: center;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.card > h4 {
+	padding-left: .25em;
+	padding-right: .25em;
+}
+
+.line {
+	height: 3px;
+	background-color: #e6e6e6;
+	box-shadow: 0px 2px 1px rgb(246,246,246);
+}
+
+.source {
+	position: absolute;
+	top: 11.5em;
+	left: .3em;
+	right: .3em;
+	bottom: 1em;
+}
+
+
+
+
+
+
 
