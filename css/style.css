@@ -11,6 +11,7 @@ body {
 	margin-top: 2.5em;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
 	color: #2c3e50;
 	letter-spacing: .1px;
@@ -73,7 +74,19 @@ a {
 
 #about {
 	border-bottom: 1px solid #f2f2f2;
-	background-color: rgb(246,246,246)
+	background-color: rgb(246,246,246);
+}
+
+@media (min-width: 375px) 
+  and (max-width: 800px) { 
+	#about {
+		text-align: center;
+	}
+	
+	/* TODO: figure out display responsive */
+	.circle {
+		display: none; 
+	}
 }
 
 #about h1 {
@@ -115,6 +128,14 @@ a {
 	float: left;
 }
 
+@media (min-width: 375px) 
+  and (max-width: 800px) { 
+	.social {
+		right: .9em;
+		float: none;
+	}
+}
+
 .icon {
 	color: rgb(26,26,26);
 	transition: color 150ms ease-in;
@@ -142,7 +163,7 @@ a {
 	display: inline-block;
 	position: relative;
 	height: 300px;
-	width: 500px;
+	width: 100%;
 	background-color: #fff;
 	border-radius: 1em;
 	box-shadow: 0px 2px 3px #cccccc;
@@ -168,6 +189,7 @@ a {
 	left: .3em;
 	right: .3em;
 	bottom: 1em;
+	margin-top: .6em;
 }
 
 
