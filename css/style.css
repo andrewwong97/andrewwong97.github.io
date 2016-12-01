@@ -110,7 +110,7 @@ a {
 .icon {
 	color: rgb(26,26,26);
 	transition: color 150ms ease-in;
-	padding: .2em;
+	padding: .1em;
 }
 
 .icon:hover {
