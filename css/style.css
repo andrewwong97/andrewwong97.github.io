@@ -21,6 +21,11 @@ a {
 	text-decoration: none;
 }
 
+.colorful {
+	color: #2ecc71;
+	font-weight: 300;
+}
+
 
 .sliding-middle-out {
     display: inline-block;
@@ -191,10 +196,6 @@ a {
 	bottom: 1em;
 	margin-top: .6em;
 }
-
-
-
-
 
 
 
