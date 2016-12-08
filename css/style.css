@@ -108,8 +108,8 @@ a {
 }
 
 .circle {
-	height: 12em;
-	width: 12em;
+	height: 11em;
+	width: 11em;
 	border-radius: 20em;
 	background-color: #3498db;
 	float: right;
@@ -120,8 +120,9 @@ a {
 }
 
 .circle > img {
-	height: 100%;
+	height: auto;
 	width: 100%;
+	margin-top: -1.25em;
 	display: inline-block;
 }
 
