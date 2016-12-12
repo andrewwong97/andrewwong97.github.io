@@ -94,6 +94,12 @@ a {
 	font-size: 1em;
 }
 
+@media (max-width: 374px) {
+	.circle {
+		display: none;
+	}
+}
+
 @media (min-width: 375px) 
   and (max-width: 1200px) { 
 	#about {
