@@ -8,7 +8,7 @@ body {
 	font-size: 16pt;
 	font-weight: 300;
 	line-height: 1.65;
-	margin-top: 2.5em;
+/*	margin-top: 2.5em;*/
 	justify-content: center;
 }
 
@@ -80,7 +80,7 @@ a {
 #about {
 	border-bottom: 1px solid #f2f2f2;
 	background-color: #FAFAFA;
-	justify-content: center;
+	text-align: justify;
 }
 
 #about h1 {
@@ -103,7 +103,7 @@ a {
 }
 
 @media (min-width: 375px) 
-  and (max-width: 1200px) { 
+  and (max-width: 1000px) { 
 	#about {
 		text-align: center;
 	}
@@ -131,8 +131,11 @@ a {
 
 }
 
-@media (min-width: 800px) 
+@media (min-width: 1001px) 
   and (max-width: 1920px) { 
+	  #about {
+		  text-align: justify;
+	  }
 	.circle {
 		height: 11em;
 		width: 11em;
@@ -223,3 +226,34 @@ a {
 	outline: none !important;
 }
 
+/* Custom Animations */
+
+#about p {
+	animation: Picture 800ms ease-in-out 0s;
+}
+
+.card {
+	animation: Cards 500ms ease-in-out 0s;
+}
+
+@keyframes Picture {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes Cards {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
