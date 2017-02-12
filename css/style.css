@@ -163,6 +163,7 @@ a {
 	color: rgb(26,26,26);
 	transition: color 125ms ease-in;
 	padding: .1em;
+	margin-bottom: .25em;
 }
 
 .icon:hover {
@@ -178,18 +179,18 @@ a {
 .card {
 	display: block;
 	position: relative;
-	height: 300px;
 	width: 100%;
+	height: 300px;
 	background-color: #fff;
 	border-radius: .5em;
 	box-shadow: 0px 3px 0px #c6c6c6;
 	text-align: center;
 	margin: 1em auto;
-	overflow: hidden;
+	overflow: scroll;
 	border-top: solid 1px #efefef;
 	border-left: solid 1px #efefef;
 	border-right: solid 1px #efefef;
-	justify-content: center;
+	justify-content: ;
 }
 
 .card h4 {
@@ -198,18 +199,15 @@ a {
 }
 
 .line {
-	height: 3px;
-	background-color: #e6e6e6;
+	height: 1px;
+	background: #e6e6e6;
 	box-shadow: 0px 2px 1px rgb(246,246,246);
+	background: linear-gradient(to right, #fff, #888888, #fff);
 }
 
 .source {
-	position: absolute;
-	top: 11.5em;
-	left: .3em;
-	right: .3em;
-	bottom: 1em;
-	margin-top: .6em;
+	position: relative;
+	bottom: .25em;
 }
 
 /* Contact */
