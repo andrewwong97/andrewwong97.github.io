@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,400,600,300italic,600italic");
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,400,600,800,300italic,600italic");
 
 /* General */
 
@@ -7,9 +7,7 @@ body {
 	font-family: "Source Sans Pro", Helvetica, sans-serif;
 	font-size: 16pt;
 	font-weight: 300;
-	line-height: 1.65;
-/*	margin-top: 2.5em;*/
-	justify-content: center;
+	line-height: 1.5;
 }
 
 
@@ -17,6 +15,32 @@ h1, h2, h3, h4, h5, h6 {
 	color: #2c3e50;
 	letter-spacing: .1px;
 }
+
+p {
+	font-size: 12pt;
+	font-weight: 400;
+	color: #777777;
+}
+
+/* Under construction */
+
+.wrapper-center {
+	padding-top: 3em;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+}
+
+#projects-title {
+	color: #cccccc;
+	font-weight: 800;
+	font-size: 36pt;
+}
+
+/**/
 
 a {
 	text-decoration: none;
@@ -115,7 +139,7 @@ a {
 		background-color: #3498db;
 		overflow: hidden;
 		position: relative;
-		top: 20px;
+		top: 0px;
 		box-shadow: 0px 1px 5px #888888;
 		margin: 0 auto;
 		margin-bottom: 20px;
@@ -125,7 +149,6 @@ a {
 	.circle > img {
 		height: auto;
 		width: 100%;
-		margin-top: -1.25em;
 		display: inline-block;
 	}
 
@@ -151,7 +174,6 @@ a {
 	.circle > img {
 		height: auto;
 		width: 100%;
-		margin-top: -1.25em;
 		display: inline-block;
 	}
 }
@@ -255,3 +277,5 @@ a {
 		transform: scale(1);
 	}
 }
+
+
