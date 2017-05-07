@@ -22,7 +22,7 @@ p {
 }
 
 p::selection {
-	color: rgba(66, 188, 244, 1);
+	background-color: rgba(66, 188, 244, 1);
 }
 
 
