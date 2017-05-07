@@ -21,8 +21,17 @@ p {
 	color: #777777;
 }
 
-p::selection {
-	background-color: rgba(66, 188, 244, 1);
+p::selection, 
+span::selection, 
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+	background-color: rgba(66, 188, 244, .8);
+	color: #fafafa;
 }
 
 
