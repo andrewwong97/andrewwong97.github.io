@@ -1,0 +1,57 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,400,600,800,300italic,600italic");
+@import '_projects';
+@import '_animate';
+@import '_about';
+@import '_social';
+@import '_nav';
+
+
+.App {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+/* General */
+
+body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 16pt;
+  font-weight: 300;
+  line-height: 1.5;
+  background-color: #efefef;
+  padding: 40px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2c3e50;
+  letter-spacing: .1px;
+}
+p {
+  font-size: 13pt;
+  font-weight: 400;
+  color: #777777;
+  margin-bottom: 30px;
+}
+p::selection,
+span::selection,
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+  background-color: rgba(66, 188, 244, .8);
+  color: #fafafa;
+}
+
+/* Overrides */
+
+a:hover {
+  text-decoration: none !important;
+}

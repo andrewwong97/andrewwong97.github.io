@@ -1,0 +1,13 @@
+/* Social */
+
+.icon {
+    color: rgb(26, 26, 26);
+    transition: color 125ms ease-in;
+    padding: .1em;
+    margin-bottom: .25em;
+
+    &:hover {
+        color: #219adb;
+        text-decoration: none !important;
+    }
+}
