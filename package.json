@@ -17,7 +17,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "mv build/* ./* && rmdir build && python addSPA.py",
+    "deploy": "./runDeploy.sh",
     "dev": "react-scripts start"
   },
   "homepage": "https://andrewwong97.github.io/",
