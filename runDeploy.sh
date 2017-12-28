@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv build/* ./*;
+mv -f build/* ./*;
 rmdir build;
 python addSPA.py;
 git commit -am "Update deploy";
