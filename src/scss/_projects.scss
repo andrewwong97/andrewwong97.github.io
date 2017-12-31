@@ -1,4 +1,4 @@
-#projects {
+.projects {
     margin-top: 50px;
 }
 
@@ -15,13 +15,29 @@
     transition: box-shadow 150ms ease-in;
 }
 
-#smookify {
+.green {
     background-image: linear-gradient(45deg, #9cf4ba 50%, #6fed9a 50%);
+    &:hover {
+        box-shadow: 0 0 8px rgba(156, 244, 186, 1);
+    }
+
+    .title, .subtitle {
+        color: #2b542c;
+    }
 }
 
-#smookify:hover {
-    box-shadow: 0 0 8px rgba(156, 244, 186, 1);
+.gray {
+    background-image: linear-gradient(45deg, #000000 50%, #626262 50%);
+    &:hover {
+        box-shadow: 0 0 8px rgba(#000000, 1);
+    }
+
+    .title, .subtitle {
+        color: #cccccc;
+    }
 }
+
+
 
 .btn-more {
     padding: 10px;
@@ -34,19 +50,19 @@
     color: #3f3f3f;
     border: none;
     transition: animation 0s ease-in;
-}
 
-.btn-more > a {
-    text-decoration: none;
-    color: inherit;
-}
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-.btn-more:hover {
-    animation: pop 400ms ease-in 0s;
-}
+    &:hover {
+        animation: pop 400ms ease-in 0s;
+    }
 
-.btn-more:active, .btn-more:focus {
-    outline: none;
+    &:active, &:focus {
+        outline: none;
+    }
 }
 
 .title {
@@ -57,14 +73,6 @@
 .subtitle {
     color: #fff;
     font-weight: 200;
-}
-
-.title.green {
-    color: #2b542c;
-}
-
-.subtitle.green {
-    color: #3c763d;
 }
 
 @keyframes pop {

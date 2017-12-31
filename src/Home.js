@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Project from './Project';
 
 export default class Home extends Component {
   render() {
@@ -19,21 +20,24 @@ export default class Home extends Component {
   
             <p>In my free time, you can find me jamming on the acoustic or electric guitar!</p><br />
           </div>
-          <div className="col-md-4 col-md-offset-4 col-xs-12 col-s-12 text-center" style={{marginBottom: ".25em"}}>
+          <div className="col-md-4 col-md-offset-4 col-xs-12 col-s-12 text-center">
             <a href="https://github.com/andrewwong97" className="icon fa fa-github fa-lg"/>
             <a href="https://linkedin.com/in/andrewwong97" className="icon fa fa-linkedin-square fa-lg" />
             <a href="https://behance.net/andrewwong97" className="icon fa fa-behance fa-lg" />
             <a href="AndrewWongTech.pdf" className="icon fa fa-file-text fa-lg" />
-            <a href="https://codepen.io/andrewwong97" className="icon fa fa-codepen fa-lg" />
             <a href="mailto:wongandrew97@gmail.com" className="icon fa fa-envelope fa-lg" />
           </div>
         </div>
-        <div id="projects">
-          <div className="rectangle" id="smookify">
-            <h1 className="green title">Smookify</h1>
-            <h3 className="green subtitle">Random music quiz app for weekly listening quizzes.</h3>
-            <a href="http://awong.io/smookify"><button className="btn-more">Try it</button></a>
-          </div>
+        <div className="projects">
+          <Project color="green"
+                   name="Smookify"
+                   subtitle="Random music quiz app for weekly listening quizzes."
+          />
+          <Project color="gray"
+                   name="Buzz"
+                   subtitle=" A classroom tool to prioritize discussions. Made at PennApps XV."
+                   btnText="Demo"
+          />
         </div>
       </body>
     )
