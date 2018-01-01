@@ -33,6 +33,11 @@ export default class Home extends Component {
                    name="Smookify"
                    subtitle="Random music quiz app for weekly listening quizzes."
           />
+          <Project color="blue"
+                   name="HopHacks"
+                   subtitle="HopHacks website and registration system."
+                   btnText="Website"
+          />
           <Project color="gray"
                    name="Buzz"
                    subtitle=" A classroom tool to prioritize discussions. Made at PennApps XV."

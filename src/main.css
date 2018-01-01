@@ -24,11 +24,18 @@
     color: #2b542c; }
 
 .gray {
-  background-image: linear-gradient(45deg, #000000 50%, #626262 50%); }
+  background-image: linear-gradient(45deg, #bdc3c7 50%, #2c3e50 50%); }
   .gray:hover {
-    box-shadow: 0 0 8px black; }
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
   .gray .title, .gray .subtitle {
-    color: #cccccc; }
+    color: #2c3e50; }
+
+.blue {
+  background-image: linear-gradient(45deg, #a4dbde 50%, #26336f 50%); }
+  .blue:hover {
+    box-shadow: 0 0 8px rgba(164, 219, 222, 0.6); }
+  .blue .title, .blue .subtitle {
+    color: #26336f; }
 
 .btn-more {
   padding: 10px;
