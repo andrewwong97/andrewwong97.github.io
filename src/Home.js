@@ -37,6 +37,7 @@ export default class Home extends Component {
                    name="HopHacks"
                    subtitle="HopHacks website and registration system."
                    btnText="Website"
+                   siteLink="https://hophacks.com/"
           />
           <Project color="gray"
                    name="Buzz"

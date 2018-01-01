@@ -7,8 +7,8 @@ class Project extends Component {
     this.state = {
       color: this.props.color || 'green',
       btnText: this.props.btnText || 'Try it',
-      href: this.props.name ? this.props.name.toLowerCase() : ''
-    }
+      link: this.props.siteLink ? this.props.siteLink : 'http://awong.io/' + this.props.name ? this.props.name.toLowerCase() : ''
+    };
   }
 
   render() {
@@ -16,7 +16,7 @@ class Project extends Component {
       <div className={`${this.state.color} rectangle`}>
         <h1 className="title">{this.props.name}</h1>
         <h3 className="subtitle">{this.props.subtitle}</h3>
-        <a href={`http://awong.io/${this.state.href}`}>
+        <a href={this.state.link}>
           <button className="btn-more">{this.state.btnText}</button>
         </a>
       </div>
@@ -28,7 +28,8 @@ Project.propTypes = {
   color: PropTypes.string, // defaults to green
   name: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
-  btnText: PropTypes.string
+  btnText: PropTypes.string,
+  siteLink: PropTypes.string,
 };
 
 export default Project;
