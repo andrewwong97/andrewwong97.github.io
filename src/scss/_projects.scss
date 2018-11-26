@@ -2,6 +2,19 @@
     margin-top: 50px;
 }
 
+.project-box {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    min-height: 100px;
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #fff;
+    transition: box-shadow 150ms ease-in;
+}
+
 .rectangle {
     display: block;
     margin: 0 auto;

@@ -5,7 +5,6 @@ class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: this.props.color || 'green',
       btnText: this.props.btnText || 'Try it',
       link: this.props.siteLink ? this.props.siteLink : 'http://awong.io/' + this.props.name ? this.props.name.toLowerCase() : ''
     };
@@ -13,7 +12,7 @@ class Project extends Component {
 
   render() {
     return (
-      <div className={`${this.state.color} rectangle`}>
+      <div className="project-box">
         <h1 className="title">{this.props.name}</h1>
         <h3 className="subtitle">{this.props.subtitle}</h3>
         <a href={this.state.link}>
@@ -25,7 +24,6 @@ class Project extends Component {
 }
 
 Project.propTypes = {
-  color: PropTypes.string, // defaults to green
   name: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   btnText: PropTypes.string,
