@@ -12,7 +12,7 @@ class Project extends Component {
 
   render() {
     return (
-      <div className="project-box">
+      <div className="project-box" style={this.props.style}>
         <h1 className="title">{this.props.name}</h1>
         <h3 className="subtitle">{this.props.subtitle}</h3>
         <a href={this.state.link}>
@@ -28,6 +28,7 @@ Project.propTypes = {
   subtitle: PropTypes.string.isRequired,
   btnText: PropTypes.string,
   siteLink: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default Project;

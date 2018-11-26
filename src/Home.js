@@ -7,18 +7,14 @@ export default class Home extends Component {
       <body>
         <div id="about">
           <div className="col-md-3 col-xs-12">
-            <div className="circle"><img src="prof_sm.jpg" /></div>
+            <div className="circle"><img src="profile.jpeg" /></div>
           </div>
           <div className="col-md-9 col-xs-12">
             <h1>Hi, my name is Andrew!</h1>
             <h2>Welcome to my page!</h2><br />
             <p>
                 I'm currently a senior at Johns Hopkins University studying Computer Science and a <a className="sliding-middle-out" href="https://hophacks.com">HopHacks</a> organizer!
-            </p>
-            <p>
                 I'm a full stack software engineer with an interest in software architecture and systems.
-                I have a desire to be different, whether it is providing unique design and engineering perspective
-                in software projects or developing personal style through hip-hop dance.
             </p>
             <p>
                 Currently looking for a position in a mid size tech firm of 100-500 engineering team.
@@ -34,25 +30,37 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="projects">
-          <Project name="Smookify" subtitle="Random music quiz app for weekly listening quizzes." />
+            <Project name="Corrie Health"
+                     subtitle=" A classroom tool to prioritize discussions."
+                     btnText="Website"
+                     siteLink="https://corriehealth.com/"
+                     style={{backgroundColor: "#2369ea"}}
+            />
         </div>
-        {/*<div className="projects">*/}
-          {/*<Project color="green"*/}
-                   {/*name="Smookify"*/}
-                   {/*subtitle="Random music quiz app for weekly listening quizzes."*/}
-          {/*/>*/}
-          {/*<Project color="blue"*/}
-                   {/*name="HopHacks"*/}
-                   {/*subtitle="HopHacks website and registration system."*/}
-                   {/*btnText="Website"*/}
-                   {/*siteLink="https://hophacks.com/"*/}
-          {/*/>*/}
-          {/*<Project color="gray"*/}
-                   {/*name="Buzz"*/}
-                   {/*subtitle=" A classroom tool to prioritize discussions. Made at PennApps XV."*/}
-                   {/*btnText="Demo"*/}
-          {/*/>*/}
-        {/*</div>*/}
+        <div className="projects" style={{margin:0}}>
+            <Project name="Semester.ly"
+                     subtitle="Improving Course Registration: SIS Add to Cart and Advisor Portal"
+                     btnText="Project Page"
+                     siteLink="http://www.dsn.jhu.edu/courses/cs310/jhu/"
+                     style={{backgroundColor: "#27ae60"}}
+            />
+        </div>
+        <div className="projects" style={{margin:0}}>
+            <Project name="Smookify" subtitle="Music quiz app for weekly listening quizzes."
+                     style={{backgroundColor: "#2c3e50"}}
+            />
+            <Project name="HopHacks"
+                     subtitle="HopHacks website and registration system."
+                     btnText="Website"
+                     siteLink="https://hophacks.com/"
+                     style={{backgroundColor: "#2d3d85"}}
+            />
+            <Project name="Buzz"
+                     subtitle=" A classroom tool to prioritize discussions."
+                     btnText="Demo"
+                     style={{backgroundColor: "#f1c40f"}}
+            />
+        </div>
       </body>
     )
   }

@@ -62,4 +62,4 @@ typings/
 
 # Config
 .idea
-.icloud
+*.icloud
