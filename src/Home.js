@@ -31,7 +31,7 @@ export default class Home extends Component {
         </div>
         <div className="projects">
             <Project name="Corrie Health"
-                     subtitle=" A classroom tool to prioritize discussions."
+                     subtitle="Patient Management Tools for Heart Attack Discharge and Recovery"
                      btnText="Website"
                      siteLink="https://corriehealth.com/"
                      style={{backgroundColor: "#2369ea"}}
