@@ -17,7 +17,7 @@ export default class Home extends Component {
                 I'm a full stack software engineer with an interest in software architecture and systems.
             </p>
             <p>
-                Currently looking for a position in a mid size tech firm of 100-500 engineering team.
+                Currently looking for a position in a mid sized tech firm.
                 Please reach out if you think there's a fit!
             </p>
           </div>
