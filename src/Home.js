@@ -44,7 +44,7 @@ export default class Home extends Component {
                      subtitle="Caching vs. Database Replication Strategies in Chained MR Jobs"
                      btnText="Project Page"
                      siteLink="http://awong.io/cloud-computing"
-                     style={{backgroundColor: "#D2DBFF"}}
+                     style={{backgroundColor: "#D2DBFF", color: "#3f3f3f"}}
             />
         </div>
         <div className="projects" style={{margin:0}}>

@@ -1,7 +1,4 @@
 # andrewwong97.github.io
 
-yarn run predeploy
+To deploy, `npm run deploy` or `yarn run deploy`
 
-yarn run deploy
-
-^ that should do the trick
