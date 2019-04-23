@@ -14,11 +14,7 @@ export default class Home extends Component {
             <h2>Welcome to my page!</h2><br />
             <p>
                 I'm currently a senior at Johns Hopkins University studying Computer Science and a <a className="sliding-middle-out" href="https://hophacks.com">HopHacks</a> organizer!
-                I'm a full stack software engineer with an interest in software architecture and systems.
-            </p>
-            <p>
-                Currently looking for a position in a mid sized tech firm.
-                Please reach out if you think there's a fit!
+                I'm a full stack software engineer with an interest in cloud architecture and systems.
             </p>
           </div>
           <div className="col-md-4 col-md-offset-4 col-xs-12 col-s-12 text-center">
@@ -43,6 +39,12 @@ export default class Home extends Component {
                      btnText="Project Page"
                      siteLink="http://www.dsn.jhu.edu/courses/cs310/jhu/"
                      style={{backgroundColor: "#27ae60"}}
+            />
+            <Project name="Cloud Computing (CS 419)"
+                     subtitle="Caching vs. Database Replication Strategies in Chained MR Jobs"
+                     btnText="Project Page"
+                     siteLink="http://awong.io/cloud-computing"
+                     style={{backgroundColor: "#D2DBFF"}}
             />
         </div>
         <div className="projects" style={{margin:0}}>
