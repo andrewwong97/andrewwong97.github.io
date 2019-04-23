@@ -16,13 +16,14 @@ export default class Home extends Component {
                 I'm currently a senior at Johns Hopkins University studying Computer Science and a <a className="sliding-middle-out" href="https://hophacks.com">HopHacks</a> organizer!
                 I'm a full stack software engineer with an interest in cloud architecture and systems.
             </p>
-          </div>
-          <div className="col-md-4 col-md-offset-4 col-xs-12 col-s-12 text-center">
-            <a href="https://github.com/andrewwong97" className="icon fa fa-github fa-lg"/>
-            <a href="https://linkedin.com/in/andrewwong97" className="icon fa fa-linkedin-square fa-lg" />
-            <a href="https://behance.net/andrewwong97" className="icon fa fa-behance fa-lg" />
-            <a href="Andrew-Resume.pdf" className="icon fa fa-file-text fa-lg" />
-            <a href="mailto:wongandrew97@gmail.com" className="icon fa fa-envelope fa-lg" />
+            <p>I'll be starting as a software developer at Atlassian in Mountain View, CA in July 2019!</p>
+            <div className="social-links">
+	            <a href="https://github.com/andrewwong97" className="icon fa fa-github fa-lg"/>
+	            <a href="https://linkedin.com/in/andrewwong97" className="icon fa fa-linkedin-square fa-lg" />
+	            <a href="https://behance.net/andrewwong97" className="icon fa fa-behance fa-lg" />
+	            <a href="Andrew-Resume.pdf" className="icon fa fa-file-text fa-lg" />
+	            <a href="mailto:wongandrew97@gmail.com" className="icon fa fa-envelope fa-lg" />
+	          </div>
           </div>
         </div>
         <div className="projects">
@@ -30,7 +31,7 @@ export default class Home extends Component {
                      subtitle="Patient Management Tools for Heart Attack Discharge and Recovery"
                      btnText="Website"
                      siteLink="https://corriehealth.com/"
-                     style={{backgroundColor: "#2369ea"}}
+                     style={{backgroundColor: "#2369ea", color: "#fafafa"}}
             />
         </div>
         <div className="projects" style={{margin:0}}>
@@ -38,7 +39,7 @@ export default class Home extends Component {
                      subtitle="Improving Course Registration: SIS Add to Cart and Advisor Portal"
                      btnText="Project Page"
                      siteLink="http://www.dsn.jhu.edu/courses/cs310/jhu/"
-                     style={{backgroundColor: "#27ae60"}}
+                     style={{backgroundColor: "#27ae60", color: "#fafafa"}}
             />
             <Project name="Cloud Computing (CS 419)"
                      subtitle="Caching vs. Database Replication Strategies in Chained MR Jobs"
@@ -49,18 +50,18 @@ export default class Home extends Component {
         </div>
         <div className="projects" style={{margin:0}}>
             <Project name="Smookify" subtitle="Music quiz app for weekly listening quizzes."
-                     style={{backgroundColor: "#2c3e50"}}
+                     style={{backgroundColor: "#2c3e50", color: "#fafafa"}}
             />
             <Project name="HopHacks"
                      subtitle="HopHacks website and registration system."
                      btnText="Website"
                      siteLink="https://hophacks.com/"
-                     style={{backgroundColor: "#2d3d85"}}
+                     style={{backgroundColor: "#2d3d85", color: "#fafafa"}}
             />
             <Project name="Buzz"
                      subtitle=" A classroom tool to prioritize discussions."
                      btnText="Demo"
-                     style={{backgroundColor: "#f1c40f"}}
+                     style={{backgroundColor: "#f1c40f", color: "#fafafa"}}
             />
         </div>
       </body>

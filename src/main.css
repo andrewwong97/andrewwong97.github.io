@@ -10,7 +10,6 @@
 
 .project-box {
   flex: 1 31%;
-  color: #fafafa;
   padding: 20px;
   border-radius: 8px;
   background-color: #2d2d2d;
@@ -172,6 +171,11 @@ a {
   .icon:hover {
     color: #219adb;
     text-decoration: none !important; }
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 /* Navigation Menu */
 #nav {
