@@ -13,10 +13,7 @@ export default class Home extends Component {
             <h1>Hi, my name is Andrew!</h1>
             <h2>Welcome to my page!</h2><br />
             <p>
-                I'm currently a senior at Johns Hopkins University studying Computer Science and a <a className="sliding-middle-out" href="https://hophacks.com">HopHacks</a> organizer!
-                I'm a full stack software engineer with an interest in cloud architecture and systems.
-            </p>
-            <p>I'll be starting as a software developer at Atlassian in Mountain View, CA in July 2019!</p>
+                I'm currently a software engineer at Atlassian interested in product development and cloud systems! Feel free to connect below.</p>
             <div className="social-links">
 	            <a href="https://github.com/andrewwong97" className="icon fa fa-github fa-lg"/>
 	            <a href="https://linkedin.com/in/andrewwong97" className="icon fa fa-linkedin-square fa-lg" />
