@@ -196,10 +196,6 @@ a {
 
 /* Responsive */
 @media (min-width: 768px) {
-  #about {
-    text-align: center;
-  }
-
   .circle {
     height: 8em;
     width: 8em;
@@ -231,11 +227,6 @@ a {
     height: 11em;
     width: 11em;
   }
-
-  .social-links {
-    display: flex;
-    justify-content: baseline;
-  }
 }
 
 @media (min-width: 1920px) {
@@ -246,11 +237,6 @@ a {
   .circle {
     height: 13em;
     width: 13em;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: baseline;
   }
 }
 
