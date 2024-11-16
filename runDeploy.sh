@@ -10,8 +10,8 @@ rsync -a build/ ./
 # Remove build directory
 rm -rf build
 
-# Run Python script (presumably adds Single Page App functionality)
-python addSPA.py
+# Run Python script to minify and add files to static directory
+python3 addSPA.py
 
 # Stage static directory, commit and push changes
 git add static
