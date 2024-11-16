@@ -1,11 +1,19 @@
 #!/bin/bash
 
+# Remove static directory both from git and filesystem
 git rm -r static
 rm -rf static
-rsync -a build/ ./;
-rm -rf build;
-python addSPA.py;
-git add static
-git commit -am "Update deploy";
-git push https://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@github.com/andrewwong97/andrewwong97.github.io.git
 
+# Copy build directory contents to current directory
+rsync -a build/ ./
+
+# Remove build directory
+rm -rf build
+
+# Run Python script (presumably adds Single Page App functionality)
+python addSPA.py
+
+# Stage static directory, commit and push changes
+git add static
+git commit -am "Update deploy"
+git push
