@@ -46,11 +46,11 @@ const Tinkering = () => (
         </div>
         <div>
           <ProjectRow yr="2025" title="Paperlight" subtitle="an e-ink dashboard for the kitchen"
-            detail="A Raspberry Pi Zero, a 7.5″ e-ink panel, and a wooden frame I routed badly. Shows the day's meetings, the tide, and one film photo from my archive — rotated at 6am so I never see the same one twice."
+            detail="A Raspberry Pi Zero, a 7.5″ e-ink panel, and a wooden frame I routed badly. Shows the day's meetings, the tide, and one photo from my archive — rotated at 6am so I never see the same one twice."
             tag="Hardware"
           />
-          <ProjectRow yr="2025" title="Rangefinder ledger" subtitle="SQLite-backed film log"
-            detail={<span>CLI and web UI for logging every frame I shoot on film: stock, developer, notes, scan. Mostly an excuse to learn <em>litestream</em> and to remember what I was thinking in frame 17.</span>}
+          <ProjectRow yr="2025" title="Frame ledger" subtitle="SQLite-backed photo log"
+            detail={<span>CLI and web UI for logging the keepers from each shoot: location, lens, settings, a one-line note. Mostly an excuse to learn <em>litestream</em> and to remember what I was thinking in frame 17.</span>}
             tag="Software"
           />
           <ProjectRow yr="2024" title="Grounds" subtitle="a grind-size calibration iOS app"

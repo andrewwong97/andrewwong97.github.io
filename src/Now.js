@@ -25,7 +25,7 @@ const Now = () => (
         <ul className="now-list">
           <li><b>Reading</b><span>Peter Watts, <em>Blindsight.</em> Second time through. Underlining less than I did at 25.</span></li>
           <li><b>Building</b><span>A pressure profiler for the lever. The soldering iron has been warm at my elbow for three weekends.</span></li>
-          <li><b>Shooting</b><span>Delta 3200, <em>after dark.</em> Cold nights make the grain sit right.</span></li>
+          <li><b>Shooting</b><span>Wide open, <em>after dark.</em> Cold nights make the city sit still.</span></li>
           <li><b>Listening</b><span>Nils Frahm, <em>All Melody.</em> On repeat. I owe my cat an apology.</span></li>
           <li><b>Learning</b><span>Enough Rust to embarrass my C++. The borrow checker is a patient teacher.</span></li>
           <li><b>Avoiding</b><span>Touching a thing at work that I know I'll have to rewrite.</span></li>

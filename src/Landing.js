@@ -10,7 +10,7 @@ const Landing = () => (
 
     <div className="middle">
       <div className="hello">Hello —</div>
-      <h1>I'm <em>Andrew Wong</em>, an engineer who tinkers, brews, and shoots film.</h1>
+      <h1>I'm <em>Andrew Wong</em>, an engineer who tinkers, brews, and takes photographs.</h1>
       <p className="intro">
         This is a quiet corner of the internet where I keep my <em>projects</em>,{' '}
         <em>photographs</em>, and a running <em>coffee log</em>. Pick a door.
@@ -32,7 +32,7 @@ const Landing = () => (
         <Link to="/photography">
           <span className="n">03</span>
           <span className="title"><em>Photography</em></span>
-          <span className="desc">Mostly film, mostly after dark</span>
+          <span className="desc">Digital, mostly after dark</span>
           <span className="arr">→</span>
         </Link>
         <Link to="/coffee">

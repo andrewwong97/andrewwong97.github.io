@@ -31,7 +31,7 @@ const Contact = () => (
           <h2 className="sec-title">For when you need a person.</h2>
         </div>
         <div className="prose">
-          <p>Most Friday afternoons I keep an hour open for anyone who wants to talk <em>payments infrastructure</em>, <em>maker-style side projects</em>, or <em>film photography</em>. It's genuinely free; I just like meeting people.</p>
+          <p>Most Friday afternoons I keep an hour open for anyone who wants to talk <em>product engineering</em>, <em>maker-style side projects</em>, or <em>street photography</em>. It's genuinely free; I just like meeting people.</p>
           <p>Email with a sentence or two about what you'd want to talk about and I'll send a link.</p>
         </div>
       </section>
