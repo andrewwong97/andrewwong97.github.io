@@ -48,8 +48,33 @@ If you change routes in `src/App.js`, no config change is needed — the trick h
 
 ## Architecture
 
-Tiny React 16 SPA bootstrapped with `react-scripts` 1.0.15 (very old CRA). Entry: `src/index.js` → `BrowserRouter` → `src/App.js`, which routes:
-- `/` → `Home`
-- `/pay` → `Venmo`
+Tiny React 16.2 SPA bootstrapped with `react-scripts` 1.0.15 (very old CRA, **no hooks** — use class components). Entry: `src/index.js` → `BrowserRouter` → `src/App.js`. Routes:
+- `/` → `Landing` — quiet editorial homepage with four primary doors.
+- `/tinkering`, `/work`, `/photography`, `/coffee`, `/now`, `/contact` → editorial subpages.
+- `/pay` → `Venmo` (redirects to venmo.com/andrewwong97).
 
-`Project.js` is a presentational component used by `Home`. Styling is a single `src/main.css`. A service worker is registered (`registerServiceWorker.js`, also present at the root as `service-worker.js` post-build).
+`<Shell />` is mounted once in `App.js`. It injects Google Fonts on the fly, applies design tokens to `<html data-accent data-mode data-type>`, and renders the floating Tweaks panel (toggle bottom-right or press `T`). Settings persist to `localStorage` under `awong_tweaks`.
+
+Service worker registers via `registerServiceWorker.js` (and ships as `service-worker.js` post-build).
+
+## Design system — use it, don't reinvent
+
+The whole site is built on `src/design-system.css`. **Default to its tokens and component classes before writing bespoke styles.** It's the canonical visual language; one-off CSS will drift from the rest of the site and break the dark/accent themes.
+
+**Tokens (CSS vars on `:root`):**
+- Color: `--paper`, `--paper-2`, `--rule`, `--ink`, `--ink-2`, `--ink-3`, `--ink-4`, `--accent`, `--accent-soft`. Never hard-code hex — colors flip under `[data-mode="dark"]` and `[data-accent="..."]`.
+- Type: `--f-display` (Fraunces serif), `--f-body` (Inter sans), `--f-mono` (JetBrains Mono), `--f-italic` (Instrument Serif — use for `<em>` accents, not whole paragraphs).
+- Layout: `--maxw` (860px reading column), `--row-h` line-height.
+
+**Component classes — pick from these first:**
+- Page chrome: `.nav` (top bar with `.sig` + `.links`), `.page` (max-width column), `.masthead` (section name + date band), `.page-footer`.
+- Editorial heads: `.dek` (mono accent eyebrow), `h1.page-title`, `.lede`, `.sec` + `.sec-head` (`.sec-no` + `h2.sec-title`).
+- Body: `.prose` (linked, italic-aware reading text). Use `<em>` inside `.prose` and `.lede` for the italic Instrument Serif.
+- Patterns: `.proj` (expandable project row — see `ProjectRow.js`), `.brew` (coffee log row), `.photos` + `.ph` (mosaic grid w/ hover caption), `.now-list`, `.contact-list`.
+
+**When extending the design:**
+- Add new component classes to `src/design-system.css` rather than inline styles or per-component CSS files. The Tweaks panel themes everything via the shared tokens, so new styles need to use `var(--…)` to participate.
+- Reuse existing `Nav`, `PageFooter`, `ProjectRow` components for new pages — they encode the conventions correctly.
+- Inline `style={{ }}` is fine for one-off layout overrides (e.g. wider page on Photography), but never for color, font-family, or font-size — those belong in tokens/classes.
+
+Names in the editorial copy ("Alex Wong" in the original design exports) have been swapped to **Andrew Wong**. Most prose is still placeholder from the design hand-off; treat it as scaffolding to replace, not gospel.
