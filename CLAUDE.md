@@ -31,12 +31,14 @@ Implications:
 ## Git workflow for agents
 
 - **Always run `yarn build` (or `yarn deploy`) before pushing.** The live site is the compiled output in the repo root — pushing source changes without rebuilding leaves `master` and the deployed site out of sync.
+- **Batch small edits; don't push after every tweak.** When the user is iterating on copy or styling with several messages in a row, accumulate the edits locally (commit them if you like) and push once the iteration has settled. A good rule: push when the user says so, when you've reached a logical checkpoint, or when a reviewer would benefit from seeing the current state. Don't run `yarn build && git commit && git push` after every one-word change — it clutters history and burns time.
 - **Branch per change.** Don't commit directly to `master`. Create a feature branch, push it, and open a PR. Scope each branch/PR to one logical change; if you find yourself touching unrelated areas, split into separate PRs.
 - **Conventional commit prefixes** on every commit message:
   - `feat:` — new user-facing functionality (new route, new component, new behavior).
   - `chore:` — maintenance with no behavior change (deps, tooling, build script tweaks, formatting, dead-code removal).
   - `fix:` — bug fixes referencing an issue when one exists (`fix: #123 ...`).
 - **Deploy commits are separate.** `runDeploy.sh` produces its own `Update deploy` commit containing only regenerated static assets. Don't mix source edits into that commit — land source via a PR first, then deploy.
+- **Worktrees live under `.claude/worktrees/<name>`** inside the repo root. Create the directory with `mkdir -p` if missing. Don't place worktrees as sibling directories of the repo.
 
 ## SPA routing on GitHub Pages
 
@@ -91,6 +93,6 @@ Most of the prose came from a Claude Design hand-off and has been progressively 
 - **No stale dates in prose.** Hardcoded "Updated 14 · 04 · 2026" or "Nth year in the profession" lines rot. Omit them unless they're auto-generated.
 - **Write for non-technical visitors too.** The breadcrumb reads "Home" (not "awong.io") for that reason. Prefer plain-language labels in chrome.
 - **Hide, don't delete.** If a page isn't ready, remove it from the Nav and Landing doors (and add `.coming` WIP treatment on Landing if it still deserves a door). Keep the route + component so direct URLs and future work still function.
-- **Expect iteration on copy.** Don't over-commit to one-shot final wording; the user typically refines in several small passes. For multiple small tweaks in a row, a plain `chore:` commit per change is fine.
+- **Expect iteration on copy.** Don't over-commit to one-shot final wording; the user typically refines in several small passes. Batch consecutive tweaks into a single commit (see Git workflow) rather than shipping a per-word commit.
 
 Names in the editorial copy ("Alex Wong" in the original design exports) have been swapped to **Andrew Wong**.
