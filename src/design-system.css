@@ -23,18 +23,19 @@
 [data-accent="mono"]     { --accent: var(--ink); --accent-soft: #17140f12; }
 
 [data-mode="dark"] {
-  --paper: #141210;
-  --paper-2: #1d1a15;
-  --rule: #ffffff1a;
-  --ink: #f1ece2;
-  --ink-2: #d4cdbf;
-  --ink-3: #9d9587;
-  --ink-4: #6b6356;
-  --accent-soft: #b0432a24;
+  --paper: #241a12;
+  --paper-2: #2e2319;
+  --rule: #ffffff1f;
+  --ink: #f1e6d0;
+  --ink-2: #d6c8aa;
+  --ink-3: #9f9276;
+  --ink-4: #6e624b;
+  --accent: #e07a5f;
+  --accent-soft: #e07a5f28;
 }
-[data-mode="dark"][data-accent="ink"]      { --accent: #8fb3e6; }
-[data-mode="dark"][data-accent="espresso"] { --accent: #c6a283; }
-[data-mode="dark"][data-accent="mono"]     { --accent: #f1ece2; }
+[data-mode="dark"][data-accent="ink"]      { --accent: #8fb3e6; --accent-soft: #8fb3e628; }
+[data-mode="dark"][data-accent="espresso"] { --accent: #d6a680; --accent-soft: #d6a68028; }
+[data-mode="dark"][data-accent="mono"]     { --accent: #f1e6d0; --accent-soft: #f1e6d016; }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
