@@ -24,18 +24,18 @@ const Landing = () => (
           <span className="desc">Engineering, day-to-day</span>
           <span className="arr">→</span>
         </Link>
-        <a href={IG_URL} target="_blank" rel="noopener noreferrer">
-          <span className="n">03</span>
-          <span className="title"><em>Photography</em><InstagramIcon size={16} /></span>
-          <span className="desc">@awong.photo on Instagram</span>
-          <span className="arr">↗</span>
-        </a>
         <div className="coming" aria-disabled="true">
-          <span className="n">04</span>
+          <span className="n">03</span>
           <span className="title">Coffee</span>
           <span className="desc">Latest thoughts</span>
           <span className="arr">WIP</span>
         </div>
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer">
+          <span className="n">04</span>
+          <span className="title"><em>Photography</em><InstagramIcon size={16} /></span>
+          <span className="desc">@awong.photo on Instagram</span>
+          <span className="arr">↗</span>
+        </a>
       </nav>
     </div>
   </main>
