@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Landing from './Landing';
 import Tinkering from './Tinkering';
 import Work from './Work';
@@ -13,16 +13,16 @@ import './design-system.css';
 
 const App = () => (
   <div className="App">
-    <Switch>
-      <Route exact path="/" component={Landing} />
-      <Route path="/tinkering" component={Tinkering} />
-      <Route path="/work" component={Work} />
-      <Route path="/photography" component={Photography} />
-      <Route path="/coffee" component={Coffee} />
-      <Route path="/now" component={Now} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/pay" component={Venmo} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/tinkering" element={<Tinkering />} />
+      <Route path="/work" element={<Work />} />
+      <Route path="/photography" element={<Photography />} />
+      <Route path="/coffee" element={<Coffee />} />
+      <Route path="/now" element={<Now />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/pay" element={<Venmo />} />
+    </Routes>
     <Shell />
   </div>
 );
