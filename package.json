@@ -23,16 +23,8 @@
     "gh-pages": "^0.12.0",
     "react-scripts": "0.9.5"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ]
 }
