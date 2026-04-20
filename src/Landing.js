@@ -30,6 +30,12 @@ const Landing = () => (
           <span className="desc">@awong.photo on Instagram</span>
           <span className="arr">↗</span>
         </a>
+        <div className="coming" aria-disabled="true">
+          <span className="n">04</span>
+          <span className="title">Coffee</span>
+          <span className="desc">A running brew log</span>
+          <span className="arr">WIP</span>
+        </div>
       </nav>
     </div>
   </main>
