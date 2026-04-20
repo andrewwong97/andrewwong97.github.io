@@ -49,11 +49,17 @@ If you change routes in `src/App.js`, no config change is needed — the trick h
 ## Architecture
 
 Tiny React 16.2 SPA bootstrapped with `react-scripts` 1.0.15 (very old CRA, **no hooks** — use class components). Entry: `src/index.js` → `BrowserRouter` → `src/App.js`. Routes:
-- `/` → `Landing` — quiet editorial homepage with four primary doors.
-- `/tinkering`, `/work`, `/photography`, `/coffee`, `/now`, `/contact` → editorial subpages.
+- `/` → `Landing` — quiet editorial homepage with a small set of doors.
+- `/tinkering`, `/work`, `/coffee`, `/now`, `/contact`, `/photography` → editorial subpages (components exist; not all are linked from the nav, see below).
 - `/pay` → `Venmo` (redirects to venmo.com/andrewwong97).
 
-`<Shell />` is mounted once in `App.js`. It injects Google Fonts on the fly, applies design tokens to `<html data-accent data-mode data-type>`, and renders the floating Tweaks panel (toggle bottom-right or press `T`). Settings persist to `localStorage` under `awong_tweaks`.
+**Routes vs. nav are deliberately not 1:1.** Only pages with real content get linked from `Nav.js` and the Landing doors. Pages that aren't ready (e.g. Coffee/Now/Contact copy is still placeholder) keep their routes and components but are hidden from the menus. The Landing communicates "coming soon" via the `.coming` door pattern (non-interactive div, `WIP` pill in the arrow slot) instead of shipping a dead link. Don't delete a page to hide it — hide it from the nav.
+
+**External links beat internal copies for creative work.** Photography isn't an internal gallery; it deep-links to `https://www.instagram.com/awong.photo/` via the `InstagramIcon`/`IG_URL` exports from `Nav.js`. When adding something like this, put external-destination doors *last* in the Landing order and render them with an `↗` arrow, not `→`.
+
+**Nav is breadcrumbs, not a menu.** `Nav.js` renders `Home / <Current Page>` — a clickable "Home" link on the left, the current page label right-aligned via `margin-left: auto`. "Home" is the word, not "awong.io" — the breadcrumb has to read clearly to non-technical visitors. If you add a new routed page, add its label to `LABELS` in `Nav.js`.
+
+`<Shell />` is mounted once in `App.js`. It injects Google Fonts on the fly, reads/writes `awong_mode` in `localStorage`, applies `[data-mode="light|dark"]` to `<html>`, and renders a small floating sun/moon button (`.mode-toggle`, bottom-right) that flips the mode. There is no Tweaks panel, no accent/type-pairing switcher (the `[data-accent]`/`[data-type]` CSS hooks are dormant but left in place in case they come back).
 
 Service worker registers via `registerServiceWorker.js` (and ships as `service-worker.js` post-build).
 
@@ -67,14 +73,24 @@ The whole site is built on `src/design-system.css`. **Default to its tokens and 
 - Layout: `--maxw` (860px reading column), `--row-h` line-height.
 
 **Component classes — pick from these first:**
-- Page chrome: `.nav` (top bar with `.sig` + `.links`), `.page` (max-width column), `.masthead` (section name + date band), `.page-footer`.
+- Page chrome: `.nav` (breadcrumb bar, see Architecture), `.page` (max-width column), `.page-footer`. (`.masthead` exists but is no longer used — the breadcrumb names the page; don't reintroduce `§ <Page>` strips.)
 - Editorial heads: `.dek` (mono accent eyebrow), `h1.page-title`, `.lede`, `.sec` + `.sec-head` (`.sec-no` + `h2.sec-title`).
-- Body: `.prose` (linked, italic-aware reading text). Use `<em>` inside `.prose` and `.lede` for the italic Instrument Serif.
-- Patterns: `.proj` (expandable project row — see `ProjectRow.js`), `.brew` (coffee log row), `.photos` + `.ph` (mosaic grid w/ hover caption), `.now-list`, `.contact-list`.
+- Body: `.prose` (linked, italic-aware reading text). Use `<em>` inside `.prose` and `.lede` for the italic Instrument Serif — but only as sparing emphasis, never on full blurbs or whole paragraphs.
+- Patterns: `.proj` (expandable project row — see `ProjectRow.js`), `.brew` (coffee log row), `.photos` + `.ph` (mosaic grid w/ hover caption), `.now-list`, `.contact-list`, `.coming` (disabled / WIP Landing door).
 
 **When extending the design:**
-- Add new component classes to `src/design-system.css` rather than inline styles or per-component CSS files. The Tweaks panel themes everything via the shared tokens, so new styles need to use `var(--…)` to participate.
+- Add new component classes to `src/design-system.css` rather than inline styles or per-component CSS files. The mode toggle themes everything via the shared tokens, so new styles need to use `var(--…)` to participate.
 - Reuse existing `Nav`, `PageFooter`, `ProjectRow` components for new pages — they encode the conventions correctly.
 - Inline `style={{ }}` is fine for one-off layout overrides (e.g. wider page on Photography), but never for color, font-family, or font-size — those belong in tokens/classes.
 
-Names in the editorial copy ("Alex Wong" in the original design exports) have been swapped to **Andrew Wong**. Most prose is still placeholder from the design hand-off; treat it as scaffolding to replace, not gospel.
+## Editorial voice & iteration
+
+Most of the prose came from a Claude Design hand-off and has been progressively stripped. When writing or editing copy on this site:
+
+- **Prefer less.** If a section is only there because a template had one (dates in the masthead, placeholder taglines, "Finished enough to put down." sec-titles under an already-clear label), it belongs on the cutting floor. Don't add decorative copy to fill space.
+- **No stale dates in prose.** Hardcoded "Updated 14 · 04 · 2026" or "Nth year in the profession" lines rot. Omit them unless they're auto-generated.
+- **Write for non-technical visitors too.** The breadcrumb reads "Home" (not "awong.io") for that reason. Prefer plain-language labels in chrome.
+- **Hide, don't delete.** If a page isn't ready, remove it from the Nav and Landing doors (and add `.coming` WIP treatment on Landing if it still deserves a door). Keep the route + component so direct URLs and future work still function.
+- **Expect iteration on copy.** Don't over-commit to one-shot final wording; the user typically refines in several small passes. For multiple small tweaks in a row, a plain `chore:` commit per change is fine.
+
+Names in the editorial copy ("Alex Wong" in the original design exports) have been swapped to **Andrew Wong**.
