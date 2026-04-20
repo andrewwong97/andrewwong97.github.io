@@ -32,10 +32,7 @@ const Landing = () => (
     </div>
 
     <div className="bottom">
-      <span>
-        <Link to="/now">Now</Link>
-        <Link to="/contact">Contact</Link>
-      </span>
+      <span />
       <span>Updated 14 · 04 · 2026</span>
     </div>
   </main>

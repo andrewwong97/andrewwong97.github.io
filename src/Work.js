@@ -17,7 +17,7 @@ const Work = () => (
         <p>I've led multi-quarter initiatives, shipped features used by tens of millions of users, and driven high-impact improvements across latency, cost, and system efficiency. I'm most energized working close to the product, solving tangible problems that directly improve the customer experience.</p>
       </div>
 
-      <PageFooter prev={{ to: '/tinkering', label: 'Tinkering' }} next={{ to: '/now', label: 'Now' }} />
+      <PageFooter prev={{ to: '/tinkering', label: 'Tinkering' }} next={{ to: '/', label: 'Home' }} />
     </main>
   </div>
 );
