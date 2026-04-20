@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { InstagramIcon, IG_URL } from './Nav';
+import { InstagramIcon, IG_URL, GithubIcon, GH_URL, LinkedInIcon, LI_URL } from './Nav';
 
 const Landing = () => (
   <main className="landing">
@@ -37,6 +37,15 @@ const Landing = () => (
           <span className="arr">↗</span>
         </a>
       </nav>
+
+      <div className="socials" aria-label="Elsewhere">
+        <a href={GH_URL} target="_blank" rel="noopener noreferrer">
+          <GithubIcon /> <span>GitHub</span>
+        </a>
+        <a href={LI_URL} target="_blank" rel="noopener noreferrer">
+          <LinkedInIcon /> <span>LinkedIn</span>
+        </a>
+      </div>
     </div>
   </main>
 );
