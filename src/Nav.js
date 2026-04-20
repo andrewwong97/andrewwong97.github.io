@@ -4,8 +4,6 @@ import { Link, withRouter } from 'react-router-dom';
 const LINKS = [
   { to: '/tinkering', label: 'Tinkering' },
   { to: '/work', label: 'Work' },
-  { to: '/photography', label: 'Photography' },
-  { to: '/coffee', label: 'Coffee' },
   { to: '/now', label: 'Now' },
   { to: '/contact', label: 'Contact' },
 ];

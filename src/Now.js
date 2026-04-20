@@ -38,7 +38,7 @@ const Now = () => (
         If you'd like a reply to something on this page, the fastest way is email — <a href="mailto:hi@awong.io">hi@awong.io</a>.
       </p>
 
-      <PageFooter prev={{ to: '/coffee', label: 'Coffee' }} next={{ to: '/contact', label: 'Contact' }} />
+      <PageFooter prev={{ to: '/work', label: 'Work' }} next={{ to: '/contact', label: 'Contact' }} />
     </main>
   </div>
 );

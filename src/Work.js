@@ -69,7 +69,7 @@ const Work = () => (
         A longer CV is available on request — <a href="mailto:hi@awong.io">hi@awong.io</a>.
       </p>
 
-      <PageFooter prev={{ to: '/tinkering', label: 'Tinkering' }} next={{ to: '/photography', label: 'Photography' }} />
+      <PageFooter prev={{ to: '/tinkering', label: 'Tinkering' }} next={{ to: '/now', label: 'Now' }} />
     </main>
   </div>
 );

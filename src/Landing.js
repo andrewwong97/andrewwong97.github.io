@@ -10,10 +10,9 @@ const Landing = () => (
 
     <div className="middle">
       <div className="hello">Hello —</div>
-      <h1>I'm <em>Andrew Wong</em>, an engineer who tinkers, brews, and takes photographs.</h1>
+      <h1>I'm <em>Andrew Wong</em>, an engineer who tinkers.</h1>
       <p className="intro">
-        This is a quiet corner of the internet where I keep my <em>projects</em>,{' '}
-        <em>photographs</em>, and a running <em>coffee log</em>. Pick a door.
+        This is a quiet corner of the internet where I keep my <em>projects</em> and occasional notes. Pick a door.
       </p>
 
       <nav className="primary">
@@ -27,18 +26,6 @@ const Landing = () => (
           <span className="n">02</span>
           <span className="title">Work</span>
           <span className="desc">Engineering, day-to-day</span>
-          <span className="arr">→</span>
-        </Link>
-        <Link to="/photography">
-          <span className="n">03</span>
-          <span className="title"><em>Photography</em></span>
-          <span className="desc">Digital, mostly after dark</span>
-          <span className="arr">→</span>
-        </Link>
-        <Link to="/coffee">
-          <span className="n">04</span>
-          <span className="title">Coffee</span>
-          <span className="desc">A running brew log</span>
           <span className="arr">→</span>
         </Link>
       </nav>
