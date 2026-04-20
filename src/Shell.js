@@ -4,12 +4,20 @@ const FONTS_HREF = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,
 
 const STORAGE_KEY = 'awong_mode';
 
+function prefersDark() {
+  try {
+    return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  } catch (e) {
+    return false;
+  }
+}
+
 function loadMode() {
   try {
-    return localStorage.getItem(STORAGE_KEY) || 'light';
-  } catch (e) {
-    return 'light';
-  }
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === 'light' || stored === 'dark') return stored;
+  } catch (e) {}
+  return prefersDark() ? 'dark' : 'light';
 }
 
 const SunIcon = () => (
