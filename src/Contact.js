@@ -6,11 +6,6 @@ const Contact = () => (
   <div>
     <Nav />
     <main className="page">
-      <div className="masthead">
-        <span className="section-name"><b>§ Contact</b></span>
-        <span className="date">Roughly once a day</span>
-      </div>
-
       <div className="dek">Say hello</div>
       <h1 className="page-title">The quickest path <em>is email.</em></h1>
       <p className="lede">I'm slower to reply than I'd like, but I read everything. The best subject lines tell me what you want; the best emails are shorter than you think they need to be.</p>

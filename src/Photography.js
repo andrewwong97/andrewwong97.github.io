@@ -14,11 +14,6 @@ const Photography = () => (
   <div>
     <Nav />
     <main className="page" style={{ maxWidth: 1100 }}>
-      <div className="masthead">
-        <span className="section-name"><b>§ Photography</b></span>
-        <span className="date">34 selected · 2023 – 2026</span>
-      </div>
-
       <div className="dek">Digital, mostly after dark</div>
       <h1 className="page-title">Quiet frames, <em>kept plain.</em></h1>
       <p className="lede">One mirrorless body, one or two primes, and as little post as I can get away with. I shoot mostly when the city is quiet — early mornings, late nights, the in-between hours. Hover any frame for the details.</p>

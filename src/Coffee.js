@@ -16,11 +16,6 @@ const Coffee = () => (
   <div>
     <Nav />
     <main className="page">
-      <div className="masthead">
-        <span className="section-name"><b>§ Coffee</b></span>
-        <span className="date">38 brews this quarter</span>
-      </div>
-
       <div className="dek">A running brew log</div>
       <h1 className="page-title">Small cups, <em>kept honestly.</em></h1>
       <p className="lede">I grade with the unforgiving <em>Tim Wendelboe scale</em> — where 8 means "I would pay for this again" and 9 means "I've stopped talking." Updated roughly weekly, more often if I'm avoiding something.</p>

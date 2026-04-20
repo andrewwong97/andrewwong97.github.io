@@ -16,33 +16,29 @@ const InstagramIcon = ({ size = 13 }) => (
   </svg>
 );
 
-const LINKS = [
-  { to: '/tinkering', label: 'Tinkering' },
-  { to: '/work', label: 'Work' },
-  { href: IG_URL, label: 'Photography', external: true, icon: InstagramIcon },
-];
+const LABELS = {
+  '/tinkering': 'Tinkering',
+  '/work': 'Work',
+  '/coffee': 'Coffee',
+  '/photography': 'Photography',
+  '/now': 'Now',
+  '/contact': 'Contact',
+};
 
-const Nav = ({ location }) => (
-  <header className="nav">
-    <Link to="/" className="sig">awong.io</Link>
-    <span className="links">
-      {LINKS.map(l => {
-        const Icon = l.icon;
-        return l.external ? (
-          <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">
-            {l.label}{Icon && <Icon />}
-          </a>
-        ) : (
-          <Link
-            key={l.to}
-            to={l.to}
-            aria-current={location.pathname === l.to ? 'page' : undefined}
-          >{l.label}</Link>
-        );
-      })}
-    </span>
-  </header>
-);
+const Nav = ({ location }) => {
+  const label = LABELS[location.pathname];
+  return (
+    <header className="nav">
+      <Link to="/" className="home">Home</Link>
+      {label && (
+        <span className="crumb-wrap">
+          <span className="sep" aria-hidden="true">/</span>
+          <span className="crumb">{label}</span>
+        </span>
+      )}
+    </header>
+  );
+};
 
 export { InstagramIcon, IG_URL };
 export default withRouter(Nav);

@@ -52,13 +52,13 @@ body {
 
 a { color: inherit; }
 
-/* ---- Nav (small, on every page) ---- */
+/* ---- Nav (breadcrumb-style, on every interior page) ---- */
 .nav {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 22px 28px 0;
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
   align-items: baseline;
   font-family: var(--f-mono);
   font-size: 11px;
@@ -66,27 +66,22 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--ink-3);
 }
-.nav .sig {
-  font-family: var(--f-italic);
-  font-style: italic;
-  font-size: 18px;
-  letter-spacing: 0;
-  text-transform: none;
+.nav .home {
   color: var(--ink);
   text-decoration: none;
-}
-.nav .links a {
-  color: var(--ink-3);
-  text-decoration: none;
-  margin-left: 18px;
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
   transition: color .15s, border-color .15s;
 }
-.nav .links a:hover, .nav .links a[aria-current="page"] {
-  color: var(--ink);
-  border-color: var(--accent);
+.nav .home:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.nav .crumb-wrap {
+  margin-left: auto;
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
 }
+.nav .sep { color: var(--ink-4); }
+.nav .crumb { color: var(--ink); }
 
 /* ---- Page shell ---- */
 .page {
@@ -245,8 +240,6 @@ footer.page-footer a:hover { border-color: var(--accent); }
 
 @media (max-width: 720px) {
   .sec-head { grid-template-columns: 1fr; gap: 8px; }
-  .nav { flex-direction: column; gap: 10px; align-items: flex-start; }
-  .nav .links a:first-child { margin-left: 0; }
 }
 
 /* ===========================================================

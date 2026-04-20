@@ -6,11 +6,6 @@ const Now = () => (
   <div>
     <Nav />
     <main className="page">
-      <div className="masthead">
-        <span className="section-name"><b>§ Now</b></span>
-        <span className="date">Updated 14 · 04 · 2026</span>
-      </div>
-
       <div className="dek">What I'm up to this month</div>
       <h1 className="page-title">A page of <em>present tense.</em></h1>
       <p className="lede">

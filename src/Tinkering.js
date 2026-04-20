@@ -7,10 +7,6 @@ const Tinkering = () => (
   <div>
     <Nav />
     <main className="page">
-      <div className="masthead">
-        <span className="section-name"><b>§ Tinkering</b></span>
-      </div>
-
       <div className="dek">Software projects, small and practical</div>
       <h1 className="page-title">Small tools, <em>mostly for me.</em></h1>
       <p className="lede">Weekend projects that never quite turn into products. A text editor, an afternoon, and an itch to scratch. Click a row to read the long version.</p>
