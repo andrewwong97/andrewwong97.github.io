@@ -1,11 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { InstagramIcon, IG_URL } from './Nav';
 
 const Landing = () => (
   <main className="landing">
     <div className="top">
       <span className="sig">awong.io</span>
-      <span>San Francisco · Est. 2018</span>
+      <span className="top-links">
+        <Link to="/tinkering">Tinkering</Link>
+        <Link to="/work">Work</Link>
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer">
+          Photography<InstagramIcon />
+        </a>
+      </span>
     </div>
 
     <div className="middle">
@@ -28,18 +35,13 @@ const Landing = () => (
           <span className="desc">Engineering, day-to-day</span>
           <span className="arr">→</span>
         </Link>
-        <a href="https://awong.photo" target="_blank" rel="noopener noreferrer">
+        <a href={IG_URL} target="_blank" rel="noopener noreferrer">
           <span className="n">03</span>
-          <span className="title"><em>Photography</em></span>
-          <span className="desc">awong.photo · external</span>
+          <span className="title"><em>Photography</em><InstagramIcon size={16} /></span>
+          <span className="desc">@awong.photo on Instagram</span>
           <span className="arr">↗</span>
         </a>
       </nav>
-    </div>
-
-    <div className="bottom">
-      <span />
-      <span>Updated 14 · 04 · 2026</span>
     </div>
   </main>
 );
