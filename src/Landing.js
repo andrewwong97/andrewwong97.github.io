@@ -10,7 +10,7 @@ const Landing = () => (
 
     <div className="middle">
       <div className="hello">Hello —</div>
-      <h1>I'm <em>Andrew Wong</em>, welcome to my corner.</h1>
+      <h1>I'm <em>Andrew Wong.</em></h1>
       <p className="intro">
         This is a quiet corner of the internet where I keep my <em>projects</em> and <em>photographs</em>. Pick a door.
       </p>
