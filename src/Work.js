@@ -8,7 +8,6 @@ const Work = () => (
     <main className="page">
       <div className="masthead">
         <span className="section-name"><b>§ Work</b></span>
-        <span className="date">Seventh year in the profession</span>
       </div>
 
       <h1 className="page-title">An engineer, <em>by trade.</em></h1>

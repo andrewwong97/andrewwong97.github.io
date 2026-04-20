@@ -9,7 +9,6 @@ const Tinkering = () => (
     <main className="page">
       <div className="masthead">
         <span className="section-name"><b>§ Tinkering</b></span>
-        <span className="date">Updated 14 · 04 · 2026</span>
       </div>
 
       <div className="dek">Software projects, small and practical</div>
