@@ -10,9 +10,9 @@ const Landing = () => (
 
     <div className="middle">
       <div className="hello">Hello —</div>
-      <h1>I'm <em>Andrew Wong</em>, an engineer who tinkers.</h1>
+      <h1>I'm <em>Andrew Wong</em>, an engineer who tinkers and takes photographs.</h1>
       <p className="intro">
-        This is a quiet corner of the internet where I keep my <em>projects</em> and occasional notes. Pick a door.
+        This is a quiet corner of the internet where I keep my <em>projects</em> and <em>photographs</em>. Pick a door.
       </p>
 
       <nav className="primary">
@@ -28,6 +28,12 @@ const Landing = () => (
           <span className="desc">Engineering, day-to-day</span>
           <span className="arr">→</span>
         </Link>
+        <a href="https://awong.photo" target="_blank" rel="noopener noreferrer">
+          <span className="n">03</span>
+          <span className="title"><em>Photography</em></span>
+          <span className="desc">awong.photo · external</span>
+          <span className="arr">↗</span>
+        </a>
       </nav>
     </div>
 
