@@ -19,7 +19,6 @@ const Tinkering = () => (
       <section className="sec">
         <div className="sec-head">
           <div className="sec-no"><b>§ 01</b>Shipped</div>
-          <h2 className="sec-title">Finished enough to put down.</h2>
         </div>
         <div>
           <ProjectRow

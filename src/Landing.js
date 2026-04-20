@@ -4,17 +4,6 @@ import { InstagramIcon, IG_URL } from './Nav';
 
 const Landing = () => (
   <main className="landing">
-    <div className="top">
-      <span className="sig">awong.io</span>
-      <span className="top-links">
-        <Link to="/tinkering">Tinkering</Link>
-        <Link to="/work">Work</Link>
-        <a href={IG_URL} target="_blank" rel="noopener noreferrer">
-          Photography<InstagramIcon />
-        </a>
-      </span>
-    </div>
-
     <div className="middle">
       <div className="hello">Hello —</div>
       <h1>I'm <em>Andrew Wong.</em></h1>
