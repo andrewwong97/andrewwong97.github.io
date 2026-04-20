@@ -33,7 +33,7 @@ const Landing = () => (
         <div className="coming" aria-disabled="true">
           <span className="n">04</span>
           <span className="title">Coffee</span>
-          <span className="desc">What I'm up to</span>
+          <span className="desc">Latest thoughts</span>
           <span className="arr">WIP</span>
         </div>
       </nav>
