@@ -1,13 +1,13 @@
 :root {
-  --paper: #e9e4d8;
-  --paper-2: #ded8ca;
-  --rule: #1a17141a;
+  --paper: #ffedd5;
+  --paper-2: #fadcb8;
+  --rule: #8a6a4d55;
   --ink: #17140f;
   --ink-2: #3b342b;
   --ink-3: #6b6356;
   --ink-4: #a59d8f;
-  --accent: #b0432a;
-  --accent-soft: #b0432a18;
+  --accent: #58a6ff;
+  --accent-soft: #58a6ff18;
 
   --f-display: 'Gloock', 'Didot', 'Bodoni 72', 'Times New Roman', serif;
   --f-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
@@ -29,8 +29,8 @@
   --ink-2: #d6c8aa;
   --ink-3: #9f9276;
   --ink-4: #6e624b;
-  --accent: #e07a5f;
-  --accent-soft: #e07a5f28;
+  --accent: #f4c9d6;
+  --accent-soft: #f4c9d628;
 }
 [data-mode="dark"][data-accent="ink"]      { --accent: #8fb3e6; --accent-soft: #8fb3e628; }
 [data-mode="dark"][data-accent="espresso"] { --accent: #d6a680; --accent-soft: #d6a68028; }
