@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const FONTS_HREF = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap';
+const FONTS_HREF = 'https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap';
 
 const STORAGE_KEY = 'awong_mode';
 

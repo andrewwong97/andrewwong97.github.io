@@ -9,10 +9,10 @@
   --accent: #b0432a;
   --accent-soft: #b0432a18;
 
-  --f-display: 'Fraunces', 'Times New Roman', serif;
-  --f-body: 'Inter', system-ui, sans-serif;
-  --f-mono: 'JetBrains Mono', ui-monospace, monospace;
-  --f-italic: 'Instrument Serif', 'Fraunces', serif;
+  --f-display: 'Gloock', 'Didot', 'Bodoni 72', 'Times New Roman', serif;
+  --f-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --f-italic: 'Instrument Serif', 'Gloock', serif;
 
   --maxw: 860px;
   --row-h: 1.6;
