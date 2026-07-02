@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const IG_URL = 'https://www.instagram.com/awong.photo/';
 const GH_URL = 'https://github.com/andrewwong97';
@@ -43,13 +43,11 @@ const LinkedInIcon = ({ size = 14 }) => (
 const LABELS = {
   '/tinkering': 'Tinkering',
   '/work': 'Work',
-  '/coffee': 'Coffee',
-  '/photography': 'Photography',
-  '/now': 'Now',
   '/contact': 'Contact',
 };
 
-const Nav = ({ location }) => {
+const Nav = () => {
+  const location = useLocation();
   const label = LABELS[location.pathname];
   return (
     <header className="nav">
@@ -65,4 +63,4 @@ const Nav = ({ location }) => {
 };
 
 export { InstagramIcon, IG_URL, GithubIcon, GH_URL, LinkedInIcon, LI_URL };
-export default withRouter(Nav);
+export default Nav;

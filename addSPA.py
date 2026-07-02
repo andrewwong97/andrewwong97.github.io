@@ -2,7 +2,7 @@ script = "<script>!function(i){if(i.search){var a={};i.search.slice(1).split(\"&
 
 def main():
 	p = open('index.html','r').read()
-	appended = p[0:p.find('<head>')] + script + p[p.find('<head>')+6:]
+	appended = p.replace('<head>', '<head>' + script, 1)
 
 	with open('index.html', 'w') as f:
 		f.write(appended)
