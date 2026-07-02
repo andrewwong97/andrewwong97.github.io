@@ -65,13 +65,13 @@ The whole site is built on `src/design-system.css`. **Default to its tokens and 
 
 **Tokens (CSS vars on `:root`):**
 - Color: `--paper`, `--paper-2`, `--rule`, `--ink`, `--ink-2`, `--ink-3`, `--ink-4`, `--accent`, `--accent-soft`. Never hard-code hex — colors flip under `[data-mode="dark"]` and `[data-accent="..."]`.
-- Type: `--f-display` (Fraunces serif), `--f-body` (Inter sans), `--f-mono` (JetBrains Mono), `--f-italic` (Instrument Serif — use for `<em>` accents, not whole paragraphs).
+- Type: `--f-display` (Gloock serif), `--f-body` (Space Grotesk sans), `--f-mono` (IBM Plex Mono). There is no italic accent face — `<em>` is normalized to upright via a global reset and gets emphasis from `color: var(--accent)` or `var(--ink)` instead.
 - Layout: `--maxw` (860px reading column), `--row-h` line-height.
 
 **Component classes — pick from these first:**
 - Page chrome: `.nav` (breadcrumb bar, see Architecture), `.page` (max-width column), `.page-footer`. (`.masthead` exists but is no longer used — the breadcrumb names the page; don't reintroduce `§ <Page>` strips.)
 - Editorial heads: `.dek` (mono accent eyebrow), `h1.page-title`, `.lede`, `.sec` + `.sec-head` (`.sec-no` + `h2.sec-title`).
-- Body: `.prose` (linked, italic-aware reading text). Use `<em>` inside `.prose` and `.lede` for the italic Instrument Serif — but only as sparing emphasis, never on full blurbs or whole paragraphs.
+- Body: `.prose` (linked reading text). Use `<em>` inside `.prose` and `.lede` for color-based emphasis (upright, not italic) — but only as sparing emphasis, never on full blurbs or whole paragraphs.
 - Patterns: `.proj` (expandable project row — see `ProjectRow.jsx`), `.brew` (coffee log row), `.photos` + `.ph` (mosaic grid w/ hover caption), `.now-list`, `.contact-list`, `.coming` (disabled / WIP Landing door).
 
 **When extending the design:**
