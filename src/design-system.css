@@ -1,6 +1,6 @@
 :root {
-  --paper: #f3efe7;
-  --paper-2: #ebe6dc;
+  --paper: #e9e4d8;
+  --paper-2: #ded8ca;
   --rule: #1a17141a;
   --ink: #17140f;
   --ink-2: #3b342b;
@@ -22,8 +22,8 @@
 [data-accent="mono"]     { --accent: var(--ink); --accent-soft: #17140f12; }
 
 [data-mode="dark"] {
-  --paper: #241a12;
-  --paper-2: #2e2319;
+  --paper: #221f21;
+  --paper-2: #2b282b;
   --rule: #ffffff1f;
   --ink: #f1e6d0;
   --ink-2: #d6c8aa;
@@ -276,9 +276,13 @@ footer.page-footer a:hover { border-color: var(--accent); }
   margin: 0 0 28px;
   max-width: 18ch;
 }
-.landing h1 em { color: var(--accent); }
+.landing h1 em {
+  font-family: 'Times New Roman', 'Didot', serif;
+  font-weight: 400;
+  color: var(--accent);
+}
 .landing .intro {
-  font-family: var(--f-display);
+  font-family: var(--f-body);
   font-size: 18px;
   line-height: 1.55;
   color: var(--ink-2);
