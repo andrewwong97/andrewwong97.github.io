@@ -63,6 +63,8 @@ There is no service worker. `src/main.jsx` actively unregisters the one the old 
 
 The whole site is built on `src/design-system.css`. **Default to its tokens and component classes before writing bespoke styles.** It's the canonical visual language; one-off CSS will drift from the rest of the site and break the dark/accent themes.
 
+**Never change design system values without explicit human approval.** This covers token values in `:root`/`[data-mode]`/`[data-accent]` (colors, fonts, spacing) and any component-class styling in `src/design-system.css` — palette swaps, font-family changes, spacing/sizing tweaks, and similar visual decisions. These are judgment calls the human makes, not something to change proactively or infer from an adjacent task. If a task seems to call for a design change, propose it and wait for explicit sign-off before editing the file; don't just make the change and show the result.
+
 **Tokens (CSS vars on `:root`):**
 - Color: `--paper`, `--paper-2`, `--rule`, `--ink`, `--ink-2`, `--ink-3`, `--ink-4`, `--accent`, `--accent-soft`. Never hard-code hex — colors flip under `[data-mode="dark"]` and `[data-accent="..."]`.
 - Type: `--f-display` (Gloock serif), `--f-body` (Space Grotesk sans), `--f-mono` (IBM Plex Mono). There is no italic accent face — `<em>` is normalized to upright via a global reset and gets emphasis from `color: var(--accent)` or `var(--ink)` instead.
@@ -74,10 +76,10 @@ The whole site is built on `src/design-system.css`. **Default to its tokens and 
 - Body: `.prose` (linked reading text). Use `<em>` inside `.prose` and `.lede` for color-based emphasis (upright, not italic) — but only as sparing emphasis, never on full blurbs or whole paragraphs.
 - Patterns: `.proj` (expandable project row — see `ProjectRow.jsx`), `.brew` (coffee log row), `.photos` + `.ph` (mosaic grid w/ hover caption), `.now-list`, `.contact-list`, `.coming` (disabled / WIP Landing door).
 
-**When extending the design:**
+**When extending the design:** the approval gate above covers this too — the bullets below say *where* new CSS should live once a change is approved, not license to add it unasked.
 - Add new component classes to `src/design-system.css` rather than inline styles or per-component CSS files. The mode toggle themes everything via the shared tokens, so new styles need to use `var(--…)` to participate.
 - Reuse existing `Nav`, `PageFooter`, `ProjectRow` components for new pages — they encode the conventions correctly.
-- Inline `style={{ }}` is fine for one-off layout overrides (e.g. wider page on Photography), but never for color, font-family, or font-size — those belong in tokens/classes.
+- Inline `style={{ }}` is fine for one-off layout overrides (e.g. wider page on Photography), but never for color, font-family, or font-size — those belong in tokens/classes. If a new token or class is needed to satisfy that, get sign-off first per the approval gate above.
 
 ## Editorial voice & iteration
 
