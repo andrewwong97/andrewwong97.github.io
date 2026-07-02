@@ -62,3 +62,8 @@ typings/
 # Config
 .idea
 *.icloud
+
+# Claude Code — local/ephemeral only; launch.json is tracked
+.claude/settings.local.json
+.claude/agent-memory/
+.claude/*.lock
